@@ -13,14 +13,9 @@ function render (gallery){
 	}).join('');	
 	galleryRef.insertAdjacentHTML('beforeend', arrImg);
 }
-galleryRef.addEventListener('click', e => {
-	
-	if(e.target.nodeName !== 'IMG'){
-		return
-	}
-new SimpleLightbox('.gallery_item', {
-	captionData: `alt`,
-	captionDelay: 250,
-	animationSpeed: 250,
-})
+
+new SimpleLightbox('.gallery a', {
+	captionsData: `alt`,
+	captionDelay: 200,
+	animationSpeed: 100,
 })
